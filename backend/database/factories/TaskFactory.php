@@ -17,9 +17,9 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=> $this->faker->title(),
-            'description'=> $this->faker->paragraph(),
-            'completed'=> $this->faker->boolean()
+            'title'=> $this->faker->sentence(2),
+            'description'=> $this->faker->text(250),
+            'completed'=> $this->faker->boolean(false)
         ];
     }
 }

@@ -78,6 +78,6 @@ class TaskController extends Controller
     {
         $task = $this->tasks->findOrFail($id);
         $task->delete();
-        return response()->json($task, Response::HTTP_OK);
+        return response()->json(['message' => 'Tarefa deletada com sucesso!'], Response::HTTP_OK);
     }
 }
